@@ -25,8 +25,6 @@
 
 @interface MXScrollViewController ()
 @property (nonatomic,weak) IBOutlet UIView *headerView;
-@property (nonatomic) IBInspectable CGFloat headerHeight;
-@property (nonatomic) IBInspectable CGFloat headerMinimumHeight;
 @end
 
 @implementation MXScrollViewController
