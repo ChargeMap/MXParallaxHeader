@@ -79,6 +79,11 @@ static void * const kMXScrollViewKVOContext = (void*)&kMXScrollViewKVOContext;
     _isObserving = YES;
 }
 
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view
+{
+    return YES;
+}
+
 #pragma mark Properties
 
 - (void)setDelegate:(id<MXScrollViewDelegate>)delegate {
