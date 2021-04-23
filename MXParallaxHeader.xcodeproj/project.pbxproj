@@ -119,7 +119,6 @@
 		9C01BCE11DA3EBBA0032494C /* UIScrollViewExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExample.swift; sourceTree = "<group>"; };
 		9C01BCEE1DA3F0E20032494C /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		9C01BCEF1DA3F0E20032494C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9C01BCF01DA3F0E20032494C /* MXParallaxHeader.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MXParallaxHeader.podspec; sourceTree = "<group>"; };
 		9C01BCF11DA3F0E20032494C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9C7904241DC23C4800149A7E /* MXFalconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXFalconViewController.h; sourceTree = "<group>"; };
 		9C7904251DC23C4900149A7E /* MXFalconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXFalconViewController.m; sourceTree = "<group>"; };
@@ -274,7 +273,6 @@
 			children = (
 				9C01BCEE1DA3F0E20032494C /* .travis.yml */,
 				9C01BCEF1DA3F0E20032494C /* LICENSE */,
-				9C01BCF01DA3F0E20032494C /* MXParallaxHeader.podspec */,
 				9C01BCF11DA3F0E20032494C /* README.md */,
 			);
 			name = Metadata;
@@ -388,6 +386,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
