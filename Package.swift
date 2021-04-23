@@ -5,15 +5,19 @@ import PackageDescription
 
 let package = Package(
     name: "MXParallaxHeader",
+    platforms: [ .iOS(.v9)],
     products: [
         .library(
             name: "MXParallaxHeader",
             targets: ["MXParallaxHeader"]),
     ],
-    dependencies: [],
+    dependencies: [
+    ],
     targets: [
         .target(
             name: "MXParallaxHeader",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources",
+            publicHeadersPath: ".")
     ]
 )
