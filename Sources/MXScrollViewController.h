@@ -1,4 +1,4 @@
-// MXScrollView.h
+// MXScrollViewController.h
 //
 // Copyright (c) 2019 Maxime Epain
 //
@@ -20,39 +20,55 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MXParallaxHeader.h"
+#import "MXScrollView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class MXScrollView;
+/**
+ The MXScrollViewController class.
+ */
+@interface MXScrollViewController : UIViewController
 
 /**
- The delegate of a MXScrollView object may adopt the MXScrollViewDelegate protocol to control subview's scrolling effect.
+ The scroll view container.
  */
-@protocol MXScrollViewDelegate <UIScrollViewDelegate>
+@property (nonatomic, readonly) MXScrollView *scrollView;
 
-@optional
 /**
- Asks the page if the scrollview should scroll with the subview.
- 
- @param scrollView The scrollview. This is the object sending the message.
- @param subView    An instance of a sub view.
- 
- @return YES to allow scrollview and subview to scroll together. YES by default.
+ The parallax header view controller to be added to the scroll view.
  */
-- (BOOL)scrollView:(MXScrollView *)scrollView shouldScrollWithSubView:(UIScrollView *)subView;
+@property (nonatomic, strong, nullable) UIViewController *headerViewController;
+
+/**
+ The child view controller to be added to the scroll view.
+ */
+@property (nonatomic, strong, nullable) UIViewController *childViewController;
 
 @end
 
 /**
- The MXScrollView is a UIScrollView subclass with the ability to hook the vertical scroll from its subviews.
+ UIViewController category to let childViewControllers easily access their parallax header.
  */
-@interface MXScrollView : UIScrollView
+@interface UIViewController (MXParallaxHeader)
 
 /**
- Delegate instance that adopt the MXScrollViewDelegate.
+ The parallax header.
  */
-@property (nonatomic, weak, nullable) IBOutlet id<MXScrollViewDelegate> delegate;
+@property (nonatomic, readonly, nullable) MXParallaxHeader *parallaxHeader;
+
+@end
+
+/**
+ The MXParallaxHeaderSegue class creates a segue object to get the parallax header view controller from storyboard.
+ */
+@interface MXParallaxHeaderSegue : UIStoryboardSegue
+
+@end
+
+/**
+ The MXScrollViewControllerSegue class creates a segue object to get the child view controller from storyboard.
+ */
+@interface MXScrollViewControllerSegue : UIStoryboardSegue
 
 @end
 

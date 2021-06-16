@@ -75,19 +75,6 @@ static void * const kMXScrollViewKVOContext = (void*)&kMXScrollViewKVOContext;
     _isObserving = YES;
 }
 
-- (BOOL)touchesShouldCancelInContentView:(UIView *)view
-{
-    return YES;
-}
-
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-{
-    if (self.isDragging || self.isDecelerating) {
-        return self;
-    }
-    return [super hitTest:point withEvent:event];
-}
-
 #pragma mark Properties
 
 - (void)setDelegate:(id<MXScrollViewDelegate>)delegate {

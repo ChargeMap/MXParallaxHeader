@@ -24,14 +24,10 @@
 #import "MXScrollViewController.h"
 
 @interface MXScrollViewController ()
-<<<<<<< HEAD:Sources/MXParallaxHeader/MXScrollViewController.m
-@property (nonatomic,weak) IBOutlet UIView *headerView;
-=======
 @property (nonatomic, weak) IBOutlet UIView *headerView;
 @property (nonatomic) IBInspectable CGFloat headerHeight;
 @property (nonatomic) IBInspectable CGFloat headerMinimumHeight;
 @property (nonatomic, weak) NSLayoutConstraint *childHeightConstraint;
->>>>>>> 5ffbe7ecd5cec177d48f1c31af5c961fa6169d7f:Sources/MXScrollViewController.m
 @end
 
 @implementation MXScrollViewController
